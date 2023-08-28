@@ -1,18 +1,14 @@
-import React from 'react'
+import Header from './components/header/Header'
+import Nav from './components/nav/Nav'
+import About from './components/about/About'
+import Experience from './components/experience/Experience'
+import Services from './components/services/Services'
+import Portfolio from './components/portfolio/Portfolio'
+import Testimonials from './components/testimonials/Testimonials'
+import Contact from './components/contact/Contact'
+import Footer from './components/footer/Footer'
 
-
-
-
-import Header from './Components/Header/Header'
-import Nav from './Components/Nav/Nav'
-import About from './Components/About/About'
-import Experience from './Components/Experience/Experience'
-import Services from './Components/Services/Services'
-import Portfolio from './Components/Portfolio/Portfolio'
-import Testimonials from './Components/Testimonials/Testimonials'
-import Contact from './Components/Contact/Contact'
-import Footer from './Components/Footer/Footer'
-export default function App() {
+const App = () => {
   return (
     <>
       <Header />
@@ -24,7 +20,8 @@ export default function App() {
       <Testimonials />
       <Contact />
       <Footer />
-
     </>
   )
 }
+
+export default App;
