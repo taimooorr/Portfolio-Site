@@ -9,7 +9,7 @@ const footerSocialMediaLinks = [
 	{ icon: <FaFacebookF />, url: "https://facebook.com" },
 	{ icon: <FiInstagram />, url: "https://instagram.com" },
 	{ icon: <IoLogoTwitter />, url: "https://twitter.com" },
-	{ icon: <RiAdminFill />, url: "#" }, // Replace '#' with the actual URL if needed
+	{ icon: <RiAdminFill />, url: "#login" }, // Replace '#' with the actual URL if needed
 ];
 const Footer = () => {
 	const name = "Taimoor Khan";

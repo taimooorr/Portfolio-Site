@@ -1,14 +1,16 @@
 .experience__container
 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .experience__container>div
 {
+  flex: 1;
   background: var(--color-bg-variant);
-  padding: 2.4rem 4rem;
+  padding: 2.4rem 5rem;
   border-radius: 2rem;
   border: 1px solid transparent;
   transition: var(--transition);
@@ -30,10 +32,10 @@
 
 .experience__content
 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 2rem;
-}
+  display: flex;
+  flex-direction: column;
+  /* Stack content vertically */
+  gap: 1.2rem;}
 
 .experience__details
 {
@@ -47,46 +49,31 @@
   color: var(--color-primary);
 }
 
-.img
-{
-  max-width: 100%;
-  height: auto;
-  width: 35px;
-}
-
-.st_img
-{
-  height: 30px;
-  width: 48px;
-}
-
-.lottie
-{
-  justify-content: center;
-  width: 380px;
-  height: 320px
-}
-
+/* ================= MEDIA QUERIES (MEDIUM DEVICES) ================= */
 @media screen and (max-width: 1024px)
 {
   .experience__container
   {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    /* Stack sections vertically */
+    align-items: center;
+    /* Center items horizontally */
   }
 
   .experience__container>div
   {
     width: 80%;
-    margin: 0 auto;
     padding: 2rem;
+    margin: 0 auto;
   }
 
-  .experience__content p
+  .experience__content
   {
     padding: 1rem;
   }
 }
 
+/* ================= MEDIA QUERIES (SMALL DEVICES) ================= */
 @media screen and (max-width: 600px)
 {
   .experience__container
@@ -97,6 +84,6 @@
   .experience__container>div
   {
     width: 100%;
-    padding: 2rem 1rem;
+    padding: 2rem;
   }
 }

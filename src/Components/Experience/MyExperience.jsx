@@ -4,17 +4,22 @@ import { BsPatchCheckFill } from "react-icons/bs";
 
 /* Adding all skill in List */
 const frontendSkills = [
-	{ id: 1, name: "React", level: "Experienced" },
-	{ id: 2, name: "React Native", level: "Intermediate" },
-	{ id: 3, name: "Bootstrap", level: "Experienced" },
-	{ id: 4, name: "Tailwind", level: "Experienced" },
+	{ id: 2, name: "React Native", level: "Experienced" },
+	{ id: 3, name: "Bootstrap", level: "Intermediate" },
+	{ id: 4, name: "Tailwind", level: "Intermediate" },
+	{ id: 5, name: "CSS", level: "Basic" },
 ];
 
 const backendSkills = [
 	{ id: 1, name: "NodeJS", level: "Experienced" },
-	{ id: 2, name: "MongoDB", level: "Intermediate" },
-	{ id: 4, name: "MySQL", level: "Basic" },
-	{ id: 5, name: "Python", level: "Experienced" },
+	{ id: 5, name: "Python", level: "Intermediate" },
+	{ id: 6, name: "Firebase", level: "Experienced" },
+];
+const DevOps = [
+	{ id: 1, name: "Docker", level: "Experienced" },
+	{ id: 2, name: "Kubernetes", level: "Intermediate" },
+	{ id: 3, name: "AWS", level: "Intermediate" },
+	{ id: 4, name: "Azure", level: "Basic" },
 ];
 export default function Experience() {
 	return (
@@ -61,7 +66,26 @@ export default function Experience() {
 						))}
 					</div>
 				</div>
-				
+
+				<div className="experience__devops">
+					<h3>DevOps </h3>
+					<div className="experience__content">
+						{DevOps.map((skill) => (
+							<article
+								className="experience__details"
+								key={skill.id}
+							>
+								<BsPatchCheckFill className="experience__details-icon" />
+								<div>
+									<h4>{skill.name}</h4>
+									<small className="text-light">
+										{skill.level}
+									</small>
+								</div>
+							</article>
+						))}
+					</div>
+				</div>
 			</div>
 		</section>
 	);

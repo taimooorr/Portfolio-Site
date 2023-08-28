@@ -1,22 +1,30 @@
 import React from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
-import { FiDribbble } from "react-icons/fi";
 
+const socialMediaLinks = [
+	{
+		name: "LinkedIn",
+		icon: <BsLinkedin />,
+		url: "https://linkedin.com",
+	},
+	{ name: "GitHub", icon: <FaGithub />, url: "https://github.com" },
+];
 const HeaderSocials = () => {
-  return (
-    <div className="header__socials">
-      <a href="https://linkedin.com" target="_blank">
-        <BsLinkedin />
-      </a>
-      <a href="https://github.com" target="_blank">
-        <FaGithub />
-      </a>
-      <a href="https://dribbble.com" target="_blank">
-        <FiDribbble />
-      </a>
-    </div>
-  );
+	return (
+		<div className="header__socials">
+			{socialMediaLinks.map((link, index) => (
+				<a
+					href={link.url}
+					target="_blank"
+					key={index}
+					rel="noreferrer"
+				>
+					{link.icon}
+				</a>
+			))}
+		</div>
+	);
 };
 
 export default HeaderSocials;
